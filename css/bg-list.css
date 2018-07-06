@@ -1,0 +1,115 @@
+/* ---------- bg-list ---------- */
+.bg-list {
+    position: relative;
+    width: 1200px;
+    height: 675px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 32px 2px rgb(167,32,10);
+}
+
+/* 列表项绝对定位到定位基准, 偏移 0 */
+.bg-li {/* 所有 li 项 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1200px;
+    height: 675px;
+}
+
+/* 非当前选中项所在图片完全透明 */
+.bg-li img {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity .8s;
+}
+
+/* 将当前选中项所在的图片显示出来 */
+.bg-li input:checked + img {
+    opacity: 1;
+    transition: opacity .8s;
+}
+
+/* 单选按钮定位 */
+.bg-li input {/* 单选切换按钮 */
+    position: absolute;
+    z-index: 2;/* 提高层级 */
+}
+.bg-li:nth-child(1) input {
+    bottom: 75px;
+    right: 195px;
+}
+.bg-li:nth-child(2) input {
+    bottom: 75px;
+    right: 180px;
+}
+.bg-li:nth-child(3) input {
+    bottom: 75px;
+    right: 165px;
+}
+.bg-li:nth-child(4) input {
+    bottom: 75px;
+    right: 150px;
+}
+.bg-li:nth-child(5) input {
+    bottom: 75px;
+    right: 135px;
+}
+.bg-li:nth-child(6) input {
+    bottom: 75px;
+    right: 120px;
+}
+.bg-li:nth-child(7) input {
+    bottom: 75px;
+    right: 105px;
+}
+.bg-li:nth-child(8) input {
+    bottom: 75px;
+    right: 90px;
+}
+.bg-li:nth-child(9) input {
+    bottom: 75px;
+    right: 75px;
+}
+
+/* label 定位及样式调整 */
+.bg-li label {
+    display: none;/* 所有 label 不显示 */
+    /* 垂直居中定位 */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 100px;
+    /* 字体样式 */
+    font-weight: blod;
+    color: white;
+    font-size: 3rem;
+    text-align: center;/* 使 label 水平居中 */
+    cursor: pointer;/* 触发手指效果 */
+    opacity: .5;/* 半透明 */
+    transition: opacity .5s;
+}
+.prev {/* 左 label 定位 */
+    left: 250px;
+}
+.next {/* 右 label 定位 */
+    right: 0;
+}
+.bg-li label:hover {/* label 滑过的效果 */
+    opacity: 1;/* 不透明 */
+    text-shadow: 0 0 15px black;/* 阴影效果 */
+    background-color: rgba(0,0,0,.8);
+}
+.bg-li input:checked ~ label {/* 当前选中的 label */
+    display: block;/* 显示当前选中 label */
+    z-index: 2;/* 提高层级 */
+}
+
+/* <>字符不居中, 需要单独设置 */
+.bg-li label span {
+    position: relative;
+    top: 15px;
+}

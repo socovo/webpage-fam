@@ -1,0 +1,92 @@
+/* ---------- side-nav ---------- */
+.side-nav-list {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: 1;
+    width: 250px;
+    height: 650px;
+    padding-top: 90px;
+    /* background-color: rgba(0,0,0,.3); */
+    border-radius: 10px 0 0 10px;
+}
+.side-nav-list li {
+    padding-bottom: 5px;
+}
+.side-nav-list li h3 {
+    line-height: 50px;
+    text-indent: 30px;
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 4px black;
+    background-color: rgba(0,0,0,.3);
+    font-family: yuehei;
+}
+.side-nav-list li h3:hover {
+    background-color: rgb(167,32,10);
+    cursor: pointer;
+}
+.side-nav-list li h3 a:link {
+    color: grey;
+}
+.side-nav-list li h3 a:visited {
+    color: grey;
+}
+.side-nav-list li h3:hover a {
+    color: white;
+    text-shadow: 1px 1px 16px white;
+}
+.side-nav-list li h3:active a {
+    color: rgb(51,180,81);
+}
+
+/* ---------- 二级菜单 ---------- */
+.sec-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 1200px;
+    height: 675px;
+    background-size: cover;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity .8s;
+}
+
+.side-nav-list li h3:hover {
+    text-align: right;
+    padding-right: 30px;
+    box-shadow: 1px 0 4px 1px rgb(51,180,81);
+}
+.side-nav-list li h3:hover + .sec-menu {
+    opacity: 1;
+    transition: opacity .8s;
+}
+
+.side-nav-list li:nth-child(1) .sec-menu {
+    background-image: url('../images/maps/cavern.png');
+}
+.side-nav-list li:nth-child(2) .sec-menu {
+    background-image: url('../images/maps/desert.png');
+}
+.side-nav-list li:nth-child(3) .sec-menu {
+    background-image: url('../images/maps/coseum.png');
+}
+.side-nav-list li:nth-child(4) .sec-menu {
+    background-image: url('../images/maps/journey.png');
+}
+.side-nav-list li:nth-child(5) .sec-menu {
+    background-image: url('../images/maps/reef.png');
+}
+.side-nav-list li:nth-child(6) .sec-menu {
+    background-image: url('../images/maps/default.png');
+}
+.side-nav-list li:nth-child(7) .sec-menu {
+    background-image: url('../images/maps/spring.png');
+}
+.side-nav-list li:nth-child(8) .sec-menu {
+    background-image: url('../images/maps/autumn.png');
+}
+.side-nav-list li:nth-child(9) .sec-menu {
+    background-image: url('../images/maps/winter.png');
+}
